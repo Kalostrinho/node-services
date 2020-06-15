@@ -1,0 +1,29 @@
+{
+  "priority": 2,
+  "request" : {
+    "urlPathPattern": "/company/employees/([0-9]+)",
+    "method": "PUT",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Basic YWRtaW46YWRtaW4=",
+        "caseInsensitive": true
+      }
+    }
+  },
+  "response" : {
+    "status" : 400,
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "jsonBody": {
+      "error": "400 Bad Request",
+      "message": "You may have forgotten a few keys within your payload",
+      "payload-example": {
+        "first-name": "Some name as a String",
+        "last-name": "Some name as a String",
+        "dark-side": "Boolean either true or false",
+        "level": "Integer from 1 to 10"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/welcome",
+    "method" : "GET",
+    "headers" : {}
+  },
+  "response" : {
+    "status" : 200,
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "jsonBody": {
+      "message": "Welcome my friend!",
+      "description": "You are now using a WireMock stub of your local docker container!!"
+    }
+  }
+}

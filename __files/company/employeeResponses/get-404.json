@@ -1,0 +1,5 @@
+{
+  "error": "404 Not Found",
+  "message": "Employee id [{{request.requestLine.pathSegments.[2]}}] does not exist in the system yet",
+  "hint": "Have you tried getting employees from [1 to 5]?"
+}

@@ -1,0 +1,18 @@
+{
+  "employees": [
+    {
+      "id": 2,
+      "first-name": "Anakin",
+      "last-name": "Skywalker",
+      "dark-side": true,
+      "level": 9
+    },
+    {
+      "id": 4,
+      "first-name": "Kylo",
+      "last-name": "Ren",
+      "dark-side": true,
+      "level": 7
+    }
+  ]
+}

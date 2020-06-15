@@ -1,0 +1,20 @@
+{
+  "priority": 2,
+  "request" : {
+    "urlPathPattern": "/company/employees/([0-9]+)",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Basic YWRtaW46YWRtaW4=",
+        "caseInsensitive": true
+      }
+    }
+  },
+  "response" : {
+    "status" : 404,
+    "headers" : {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName" : "company/employeeResponses/get-404.json"
+  }
+}

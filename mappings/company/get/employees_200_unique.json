@@ -1,0 +1,20 @@
+{
+  "priority": 1,
+  "request" : {
+    "urlPathPattern": "/company/employees/(1|2|3|4|5)",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Basic YWRtaW46YWRtaW4=",
+        "caseInsensitive": true
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "headers" : {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName" : "company/employeeResponses/get-200-unique-{{request.requestLine.pathSegments.[2]}}.json"
+  }
+}

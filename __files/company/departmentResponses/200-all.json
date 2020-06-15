@@ -1,0 +1,29 @@
+{
+  "departments": [
+    {
+      "id": "01",
+      "name": "Rebellion Affairs",
+      "floor": 5
+    },
+    {
+      "id": "02",
+      "name": "Alderaan Human Resources",
+      "floor": 2
+    },
+    {
+      "id": "03",
+      "name": "The Force Onboarding And New Joiners",
+      "floor": 1
+    },
+    {
+      "id": "04",
+      "name": "Bounty Hunters Headquarters",
+      "floor": 3
+    },
+    {
+      "id": "05",
+      "name": "The Republic Financing",
+      "floor": 4
+    }
+  ]
+}

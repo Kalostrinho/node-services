@@ -1,0 +1,33 @@
+{
+  "author": "AlanZinho",
+  "name": "docker-mocked-api",
+  "version": "1.0.0",
+  "description": "Awesome CLI tool to create a mocked RESTful service and execute few JS tests for the service spawned",
+  "main": "./bin/index.js",
+  "bin": {
+    "service-now": "./bin/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
+    "cli-spinner": "^0.2.10",
+    "ora": "^4.0.4",
+    "shelljs": "^0.8.4",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test:healthcheck": "mocha -g HealthCheck"
+  },
+  "keywords": [
+    "docker",
+    "wiremock",
+    "frisbyJS"
+  ],
+  "license": "MIT"
+}

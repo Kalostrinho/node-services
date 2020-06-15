@@ -1,0 +1,3 @@
+#!/bin/sh
+# LAUNCHING WIREMOCK WITHIN THE CONTAINER...
+java -jar /app/wiremock-standalone-*.jar --port 3000 --verbose --local-response-templating --global-response-templating

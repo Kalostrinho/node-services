@@ -1,0 +1,14 @@
+{
+  "priority": 1,
+  "request" : {
+    "urlPathPattern": "/company/departments",
+    "method": "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "headers" : {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName" : "company/departmentResponses/200-all.json"
+  }
+}

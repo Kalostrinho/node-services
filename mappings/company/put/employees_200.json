@@ -1,0 +1,42 @@
+{
+  "priority": 1,
+  "request" : {
+    "urlPathPattern": "/company/employees/(1|2|3|4|5)",
+    "method": "PUT",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Basic YWRtaW46YWRtaW4=",
+        "caseInsensitive": true
+      }
+    },
+    "bodyPatterns" : [
+      {
+        "matchesJsonPath" : "$.first-name"
+      },
+      {
+        "matchesJsonPath" : "$.last-name"
+      },
+      {
+        "matchesJsonPath" : "$.dark-side"
+      },
+      {
+        "matchesJsonPath" : "$.level"
+      }
+    ]
+  },
+  "response" : {
+    "status" : 200,
+    "headers" : {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "message": "Employee updated! Again... NOT REALLY!!",
+      "updated-employee": {
+        "first-name": "{{jsonPath request.body '$.first-name'}}",
+        "last-name": "{{jsonPath request.body '$.last-name'}}",
+        "dark-side": "{{jsonPath request.body '$.dark-side'}}",
+        "level": "{{jsonPath request.body '$.level'}}"
+      }
+    }
+  }
+}

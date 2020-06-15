@@ -1,0 +1,5 @@
+{
+  "error": "404 Not Found",
+  "message": "Employee id [{{request.requestLine.pathSegments.[2]}}] does not exist in the system. Nothing to delete!",
+  "hint": "Did you try getting information from employee with id [{{request.requestLine.pathSegments.[2]}}]? Does it exist?"
+}

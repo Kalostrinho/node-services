@@ -1,0 +1,20 @@
+{
+  "priority": 1,
+  "request" : {
+    "urlPathPattern": "/company/employees/(1|2|3|4|5)",
+    "method": "DELETE",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Basic YWRtaW46YWRtaW4=",
+        "caseInsensitive": true
+      }
+    }
+  },
+  "response" : {
+    "status" : 204,
+    "statusMessage": "Deleted! Not really though",
+    "headers" : {
+      "Content-Type": "application/json"
+    }
+  }
+}

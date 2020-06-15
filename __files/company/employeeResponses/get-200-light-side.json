@@ -1,0 +1,25 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "first-name": "Ben",
+      "last-name": "Kenobi",
+      "dark-side": false,
+      "level": 9
+    },
+    {
+      "id": 3,
+      "first-name": "Luke",
+      "last-name": "Skywalker",
+      "dark-side": false,
+      "level": 10
+    },
+    {
+      "id": 5,
+      "first-name": "Han",
+      "last-name": "Solo",
+      "dark-side": false,
+      "level": 6
+    }
+  ]
+}

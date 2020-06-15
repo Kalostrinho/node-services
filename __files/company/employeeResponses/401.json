@@ -1,0 +1,5 @@
+{
+  "error": "401 Unauthorized",
+  "message": "You don't have enough privileges to see the list of employees",
+  "hint": "Have you tried giving [admin/admin] as basic auth credentials on the header?"
+}

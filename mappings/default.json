@@ -1,0 +1,19 @@
+{
+  "priority": 9,
+  "request" : {
+    "urlPathPattern" : "/(.*)",
+    "method" : "ANY",
+    "headers" : {}
+  },
+  "response" : {
+    "status" : 400,
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "jsonBody": {
+      "error": "400 Bad Request",
+      "message": "INVALID ENDPOINT!",
+      "detail": "[{{request.requestLine.method}} {{request.url}}] does not exist!"
+    }
+  }
+}

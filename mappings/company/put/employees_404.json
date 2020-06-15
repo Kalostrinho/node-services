@@ -1,0 +1,34 @@
+{
+  "priority": 2,
+  "request" : {
+    "urlPathPattern": "/company/employees/([0-9]+)",
+    "method": "PUT",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Basic YWRtaW46YWRtaW4=",
+        "caseInsensitive": true
+      }
+    },
+    "bodyPatterns" : [
+      {
+        "matchesJsonPath" : "$.first-name"
+      },
+      {
+        "matchesJsonPath" : "$.last-name"
+      },
+      {
+        "matchesJsonPath" : "$.dark-side"
+      },
+      {
+        "matchesJsonPath" : "$.level"
+      }
+    ]
+  },
+  "response" : {
+    "status" : 404,
+    "headers" : {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName" : "company/employeeResponses/put-404.json"
+  }
+}

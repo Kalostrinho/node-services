@@ -1,0 +1,26 @@
+{
+  "priority": 1,
+  "request" : {
+    "urlPathPattern": "/company/employees",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Basic YWRtaW46YWRtaW4=",
+        "caseInsensitive": true
+      }
+    },
+    "queryParameters" : {
+      "side" : {
+        "equalTo" : "dark",
+        "caseInsensitive": true
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "headers" : {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName" : "company/employeeResponses/get-200-dark-side.json"
+  }
+}

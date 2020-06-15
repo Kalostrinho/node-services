@@ -1,0 +1,14 @@
+{
+  "priority": 3,
+  "request" : {
+    "urlPathPattern": "/company/employees/([0-9]+)",
+    "method": "ANY"
+  },
+  "response" : {
+    "status" : 401,
+    "headers" : {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName" : "company/employeeResponses/401.json"
+  }
+}

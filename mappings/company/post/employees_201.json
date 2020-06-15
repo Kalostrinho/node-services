@@ -1,0 +1,42 @@
+{
+  "priority": 1,
+  "request" : {
+    "urlPathPattern": "/company/employees",
+    "method": "POST",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Basic YWRtaW46YWRtaW4=",
+        "caseInsensitive": true
+      }
+    },
+    "bodyPatterns" : [
+      {
+        "matchesJsonPath" : "$.first-name"
+      },
+      {
+        "matchesJsonPath" : "$.last-name"
+      },
+      {
+        "matchesJsonPath" : "$.dark-side"
+      },
+      {
+        "matchesJsonPath" : "$.level"
+      }
+    ]
+  },
+  "response" : {
+    "status" : 201,
+    "headers" : {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "message": "Employee created! Well... NOT REALLY!!",
+      "created-employee": {
+        "first-name": "{{jsonPath request.body '$.first-name'}}",
+        "last-name": "{{jsonPath request.body '$.last-name'}}",
+        "dark-side": "{{jsonPath request.body '$.dark-side'}}",
+        "level": "{{jsonPath request.body '$.level'}}"
+      }
+    }
+  }
+}
