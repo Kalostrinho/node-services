@@ -24,4 +24,8 @@ module.exports = yargs
   .option('no-clean',{
     describe: 'Skip initial clean up (USE WITH CAUTION).', 
     type: 'boolean'
+  })
+  .option('no-tests',{
+    describe: 'Skip basic test suite.', 
+    type: 'boolean'
   }).argv

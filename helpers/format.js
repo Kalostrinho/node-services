@@ -50,6 +50,31 @@ function subTitle(msg){
 }
 
 /**
+ * Prints out a stylized request data (payload).
+ * @param {string} reqData - The request data in the form of a JSON
+ */
+function request(reqData){
+  const bxOpts = {
+    padding: {
+      top: 0, 
+      bottom: 0,
+      left: 1,
+      right: 1
+    },
+    margin: {
+      top: 1, 
+      bottom: 0,
+      left: 6,
+      right: 0
+    },
+    borderStyle: 'round',
+    borderColor: 'magenta',
+    backgroundColor: 'black'
+  }
+  console.log(`${boxen(chalk.magentaBright.bold(reqData), bxOpts)}`)
+}
+
+/**
  * Prints out a stylized notification message.
  * @param {string} msg - The notification to set
  */
@@ -131,6 +156,7 @@ function welcome(){
 module.exports = {
   title,
   subTitle,
+  request,
   notification,
   general,
   error,

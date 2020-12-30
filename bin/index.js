@@ -44,6 +44,15 @@ if (!args.c) {
     cmd.wiremockHealthCheck()
   }
 
+  //  --- Running tests...
+  if (!args['no-tests']) {
+    out.subTitle(`🛠 RUNNING TESTS 🛠`)
+    cmd.runBasicTests()
+  }
+  
+  //  --- Providing feedback to users...
+  cmd.provideFeedback()
+
 } else {
   out.title('🤣 SEE? I TOLD YOU! 🤣')
 }
