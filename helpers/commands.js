@@ -106,6 +106,49 @@ function wiremockHealthCheck(){
 }
 
 /**
+ * Runs a basic test suite for most of the available endpoints
+ * 
+ */
+function runBasicTests(){
+  let start = new Date()
+  out.general(`⏳ => Run basic services tests`)
+  const res = _execute('npm run test:basic')
+  if (res.code === 0) {
+    out.success(`✅ => SUCCESS! All basic tests passed!`)
+  } else {
+    out.error(`💣 Something went wrong with the basic test suite! 💥\n🔥🔥🔥🔥🔥\n${JSON.stringify(res, null, 2)}\n`)
+    sh.exit(1)
+  }
+  _elapsedTime(start)
+}
+
+/**
+ * Provides information regarding the services spawned
+ * 
+ */
+function provideFeedback(){
+  const fig = require('figlet')
+  console.log(chalk.greenBright(fig.textSync('SETUP COMPLETED!', { 
+    font: 'Doom'
+  })))
+  const info = '⭐️ ⭐️ ⭐️ ⭐️ ⭐️' 
+  + '\n\n✨ Services are up and running now!'
+  + '\nFeel free to add your own [WireMock mappings]'
+  + '\n\n✨ These are some of the endpoints you could try either by "curling" or using "Postman":'
+  + '\n   🔓 GET http://localhost:3000/welcome'
+  + '\n   🔓 GET http://localhost:3000/company/employees ' + chalk.italic('(without any basic credentials)')
+  + '\n   🔐 GET http://localhost:3000/company/employees ' + chalk.italic('(with credentials 😉)')
+  + '\n   🔐 GET http://localhost:3000/company/employees/<id> ' + chalk.italic('(IDs are numeric)') 
+  + '\n   🔐 GET http://localhost:3000/company/employees?side=<side> ' + chalk.italic('(try either "dark" or "light" sides)')
+  + '\n   🔐 POST http://localhost:3000/company/employees ' + chalk.italic('(you\'ll need a proper payload 😉)')
+  + '\n   🔐 PUT http://localhost:3000/company/employees ' + chalk.italic('(you\'ll need a proper payload 😉)')
+  + '\n   🔐 DELETE http://localhost:3000/company/employees/<id> ' + chalk.italic('(IDs are numeric)')
+  + chalk.italic.dim('\n\n... (and more)\n')
+  + '\n✨ Make sure to ' + chalk.italic.dim('[npm run test:basic]') + ' for further information on the endpoints and their responses\n'
+  out.success(info)
+}
+
+/**
  *  **************************
  *      **************************
  *            PRIVATE METHODS
@@ -160,7 +203,9 @@ module.exports = {
   mountDockerImage,
   verifyDockerImage,
   verifyImageMount,
-  wiremockHealthCheck
+  wiremockHealthCheck,
+  runBasicTests,
+  provideFeedback,
 }
 
 

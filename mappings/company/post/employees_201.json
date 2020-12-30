@@ -30,7 +30,7 @@
       "Content-Type": "application/json"
     },
     "jsonBody": {
-      "message": "Employee created! Well... NOT REALLY!!",
+      "message": "Employee created! Well... NOT REALLY! Just a mock remember?",
       "created-employee": {
         "first-name": "{{jsonPath request.body '$.first-name'}}",
         "last-name": "{{jsonPath request.body '$.last-name'}}",

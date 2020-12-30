@@ -1,8 +1,9 @@
 {
-  "author": "AlanZinho",
-  "name": "docker-mocked-api",
-  "version": "1.0.0",
+  "author": "AlanDOU",
+  "name": "mocked-local-services",
+  "version": "2.0.0",
   "description": "Awesome CLI tool to create a mocked RESTful service and execute few JS tests for the service spawned",
+  "repository": "https://gitlab.com/DigitalOnUs/quality-engineering/training/mocked-local-services",
   "main": "./bin/index.js",
   "bin": {
     "service-now": "./bin/index.js"
@@ -18,16 +19,18 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.0.1"
+    "figlet": "^1.5.0",
+    "mocha": "^8.2.1",
+    "taghash": "^1.2.2"
   },
   "scripts": {
     "test": "mocha",
+    "test:basic": "mocha -g 'BASIC SUITE'",
     "test:healthcheck": "mocha -g HealthCheck"
   },
   "keywords": [
     "docker",
     "wiremock",
-    "frisbyJS"
-  ],
-  "license": "MIT"
+    "api"
+  ]
 }
