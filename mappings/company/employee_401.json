@@ -1,5 +1,5 @@
 {
-  "priority": 3,
+  "priority": 4,
   "request" : {
     "urlPathPattern": "/company/employees/([0-9]+)",
     "method": "ANY"
