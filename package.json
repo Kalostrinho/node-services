@@ -9,7 +9,7 @@
     "service-now": "./bin/index.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "boxen": "^4.2.0",
     "chalk": "^4.1.0",
     "cli-spinner": "^0.2.10",
