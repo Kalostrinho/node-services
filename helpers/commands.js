@@ -111,7 +111,7 @@ function wiremockHealthCheck(){
  */
 function runBasicTests(){
   let start = new Date()
-  out.general(`⏳ => Run basic services tests`)
+  out.general(`⏳ => Validate services are up and running`)
   const res = _execute('npm run test:basic')
   if (res.code === 0) {
     out.success(`✅ => SUCCESS! All basic tests passed!`)

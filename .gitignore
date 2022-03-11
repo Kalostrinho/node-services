@@ -1,1 +1,5 @@
+# Node deps
 node_modules/
+
+# iOS folder config
+.DS_Store

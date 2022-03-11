@@ -1,9 +1,9 @@
 {
-  "author": "AlanDOU",
-  "name": "mocked-local-services",
-  "version": "2.0.0",
-  "description": "Awesome CLI tool to create a mocked RESTful service and execute few JS tests for the service spawned",
-  "repository": "https://gitlab.com/DigitalOnUs/quality-engineering/training/mocked-local-services",
+  "author": "AlanZinho",
+  "name": "node-services",
+  "version": "3.0.0",
+  "description": "Awesome CLI tool to create a mocked RESTful service (on a docker container) and execute few JS tests for the service spawned",
+  "repository": "https://github.com/Kalostrinho/node-services",
   "main": "./bin/index.js",
   "bin": {
     "service-now": "./bin/index.js"
@@ -25,10 +25,14 @@
   },
   "scripts": {
     "test": "mocha",
-    "test:basic": "mocha -g 'BASIC SUITE'",
+    "test:basic": "mocha -g 'BASIC'",
+    "test:basic:happy": "mocha -g 'BASIC: Happy'",
+    "test:basic:sad": "mocha -g 'BASIC: Error'",
     "test:healthcheck": "mocha -g HealthCheck"
   },
   "keywords": [
+    "mocha",
+    "automation",
     "docker",
     "wiremock",
     "api"
